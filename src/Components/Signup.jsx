@@ -42,7 +42,7 @@ const SignUp = () => {
               <p className="text-center">Already have an account?</p>
               <a class="btn btn-primary mx-10" href="/login" role="button">Login</a>
               <div className="text-center">
-                <button type="submit" className="btn btn-success-subtle btn-outline-success btn-lg" data-bs-toggle="button" aria-pressed="true">Sign UP</button>
+                <button type="submit" className="btn btn-info-subtle btn-outline-info btn-lg" data-bs-toggle="button" aria-pressed="true">Sign UP</button>
               </div>
             </form>
           </div>
