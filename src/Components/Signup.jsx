@@ -2,8 +2,8 @@ import React from 'react';
 const SignUp = () => {
     
     return (
-      <div className="bg-success d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
-        <div className="card cb1 bg-success-subtle border-4 border-black" style={{ '--bs-border-opacity': '.5', width: '30rem' }}>
+      <div className="bg-info d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
+        <div className="card cb1 bg-info-subtle border-4 border-black" style={{ '--bs-border-opacity': '.5', width: '30rem' }}>
           <div className="card-body">
             <h1 className="card-title text-center p-2 text-success-emphasis">SIGN UP</h1>
             <form className="row g-3">
