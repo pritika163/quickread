@@ -2,8 +2,8 @@ import React from 'react';
 const SignUp = () => {
     
     return (
-      <div className="bg-success d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
-        <div className="card cb1 bg-success-subtle border-4 border-black" style={{ '--bs-border-opacity': '.5', width: '30rem' }}>
+      <div className="bg-info d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
+        <div className="card cb1 bg-info-subtle border-4 border-black" style={{ '--bs-border-opacity': '.5', width: '30rem' }}>
           <div className="card-body">
             <h1 className="card-title text-center p-2 text-success-emphasis">SIGN UP</h1>
             <form className="row g-3">
@@ -42,7 +42,7 @@ const SignUp = () => {
               <p className="text-center">Already have an account?</p>
               <a class="btn btn-primary mx-10" href="/login" role="button">Login</a>
               <div className="text-center">
-                <button type="submit" className="btn btn-success-subtle btn-outline-success btn-lg" data-bs-toggle="button" aria-pressed="true">Sign UP</button>
+                <button type="submit" className="btn btn-info-subtle btn-outline-info btn-lg" data-bs-toggle="button" aria-pressed="true">Sign UP</button>
               </div>
             </form>
           </div>
@@ -50,5 +50,5 @@ const SignUp = () => {
       </div>
     );
   };
-  
+
   export default SignUp;
