@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link, useLocation } from "react-router-dom";
 const Navbar = () => {
     return(
         <>
@@ -37,7 +37,10 @@ const Navbar = () => {
                     <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                     </li>
                 </ul>
-                
+                <form className='d-flex'>
+                <Link class="btn btn-primary mx-2" to="/login" role="button">Login</Link>
+                <Link class="btn btn-primary mx-2"  to="/signup" role="button">SignUp</Link>
+                </form>
                 </div>
             </div>
             </nav>

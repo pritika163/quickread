@@ -4,7 +4,8 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 //import { useState } from 'react';
 import Home from './Home';
 import About from './About';
-import Contact from './Contact';
+import Signup from './Components/Signup';
+import Login from './Components/Login';
 import Navbar from './Navbar';
 import { Route, Routes, Navigate } from "react-router-dom";
 //import StoryList from './Components/StoryList';
@@ -17,15 +18,15 @@ const App =() => {
     
     return (
         <div >
-            
             <Navbar/>
             <Routes>
                 <Route exact path="/" element={<Home/>} />
                 <Route exact path="/about" element={<About/>} />
-                <Route exact path="/contact" element={<Contact/>} />
+                <Route exact path="/login" element={<Login/>} />
+                <Route exact path="/signup" element={<Signup/>} />
                 <Route exact path="*" element={<Navigate to="/" />} />
             </Routes>
-             
+            
                
         </div>
     );

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useEffect } from 'react';
+import { useState } from 'react';
 import { Route, Routes, Navigate } from "react-router-dom";
 import StoryList from './Components/StoryList';
 import { nanoid } from 'nanoid';
@@ -36,7 +37,6 @@ const Home =() => {
 
     const [searchText, setSearchText] = useState('');
     const [selectedGenre, setSelectedGenre] = useState('');
-    const [selectedStoryId, setSelectedStoryId] = useState('');
     const [darkMode, setDarkMode] = useState(false);
     const [showAddStory, setShowAddStory] = useState(false);
 
@@ -72,20 +72,6 @@ const Home =() => {
         setStory(newStories);
     }
 
-    const handleSelectStory = (id) => {
-        setSelectedStoryId(id);
-    };
-
-    const handleAddRating = (id, rating) => {
-        const updatedStory = story.map((item) => {
-            if (item.id === id) {
-                return { ...item, rating: rating };
-            }
-            return item;
-        });
-        setStory(updatedStory);
-    };
-
     return (
         <div className={`${darkMode && 'dark-mode'}`}>
             <div className='container'>
@@ -111,13 +97,7 @@ const Home =() => {
                     (selectedGenre ? story.genre === selectedGenre : true)
                 )}    
                     handleDeleteStory={deleteStory}
-                    handleSelectStory={handleSelectStory}
                 />
-                {selectedStoryId && (
-                    <AddRating
-                        handleAddRating={(rating) => handleAddRating(selectedStoryId, rating)}
-                    />
-                )}
                 <CiCirclePlus  className='plus-icon' onClick={toggleAddStory} size='2em'></CiCirclePlus>
                 {showAddStory && <AddStory handleAddStory={addStory} />}
             </div> 
