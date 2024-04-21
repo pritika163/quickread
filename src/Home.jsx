@@ -14,6 +14,7 @@ const Home =() => {
     const [story, setStory] = useState([
         {
             id: nanoid(),
+            title: "Title 1",
             text: "This my first story",
             genre: "Mystery",
             date: "12/04/2023",
@@ -21,6 +22,7 @@ const Home =() => {
         },
         {
             id: nanoid(),
+            title: "Title 2",
             text: "This my second story",
             genre: "Romantic",
             date: "14/04/2023",
@@ -28,6 +30,7 @@ const Home =() => {
         },
         {
             id: nanoid(),
+            title: "Title 3",
             text: "This my third story",
             genre: "Comedy",
             date: "18/04/2023",
@@ -55,10 +58,11 @@ const Home =() => {
         setShowAddStory(!showAddStory);
     };
 
-    const addStory = (text, gen) => {
+    const addStory = (tit, text, gen) => {
         const date = new Date();
         const newStory = {
             id: nanoid(),
+            title: tit,
             text: text,
             genre: gen,
             date: date.toLocaleDateString()

@@ -6,6 +6,7 @@ const StoryList =({ story, handleDeleteStory, handleRating }) => {
             {story.map((story)=>(   
             <StoryW 
                 id={story.id} 
+                title={story.title}
                 text={story.text} 
                 genre={story.genre} 
                 date={story.date}

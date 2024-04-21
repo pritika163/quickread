@@ -4,10 +4,10 @@ import AddStory from './AddStory'; // Assuming AddStory component is in a separa
 const Add = () => {
   const [showAddStory, setShowAddStory] = useState(false);
 
-  const handleAddStory = (storyText, storyGenre) => {
-    // Handle adding the story logic here
-    console.log("Adding story:", storyText, "with genre:", storyGenre);
-    // You can add the actual logic to add the story to your data
+  const handleAddStory = (storyText, storyTitle, storyGenre) => {
+    
+    console.log("Adding story:", storyText, "with title:", storyTitle, "with genre:", storyGenre);
+    
   };
 
   const toggleAddStory = () => {

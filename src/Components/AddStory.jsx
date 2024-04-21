@@ -2,18 +2,26 @@ import { useState } from 'react';
 
 const AddStory = ({ handleAddStory }) => {
     const [storyText, setStoryText] = useState('');
+    const [storyTitle, setStoryTitle] = useState('');
     const [selectedGenres, setSelectedGenres] = useState('');
     const charLim = 5000;
+    const charLimt = 100;
 
     const handleChange = (event) => {
         if (charLim - event.target.value.length >= 0)
             setStoryText(event.target.value);
     };
+    const handleTitleChange = (event) => {
+        if (charLimt - event.target.value.length >= 0)
+            setStoryTitle(event.target.value);
+    };
+
 
     const handleSaveClick = () => {
         if (storyText.trim().length > 0) {
-            handleAddStory(storyText, selectedGenres);
+            handleAddStory(storyText, storyTitle, selectedGenres);
             setStoryText('');
+            setStoryTitle('');
             setSelectedGenres('');
         }
     };
@@ -24,6 +32,13 @@ const AddStory = ({ handleAddStory }) => {
 
     return (
         <div className='story new'>
+            <textarea
+                rows='3'
+                cols='10'
+                placeholder='Type title....'
+                value={storyTitle}
+                onChange={handleTitleChange}
+            ></textarea>
             <textarea
                 rows='8'
                 cols='10'

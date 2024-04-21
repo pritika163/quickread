@@ -1,8 +1,11 @@
 import React from 'react'
 import { MdDeleteForever } from 'react-icons/md'
-function StoryW({id, text, genre, date, rating, handleDeleteStory}) {
+function StoryW({id, title, text, genre, date, rating, handleDeleteStory}) {
+  
   return (
+    
     <div className="story">
+        <h3>{title}</h3>
         <span>{text}</span>
         <div className="story_footer">
           <small>{date}</small>
